@@ -1,0 +1,16 @@
+{
+  "name": "Banglish to Bangla Converter",
+  "description": "Converts ugly banglish text to pretty bangla.\nRifat Nabi's jsAvroPhonetic is used for conversation",
+  "version": "1.0",
+  "permissions": ["contextMenus","tabs"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inject.js"],
+      "run_at" : "document_start",
+      "all_frames": true
+    }
+  ],
+  "background_page": "background.html",
+  "content_security_policy": "default-src 'self'"
+}
